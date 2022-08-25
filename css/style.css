@@ -1,0 +1,197 @@
+@import "reset.css";
+
+
+/*GLOBAL*/
+
+:root {
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  --darkGrayishRed: hsl(0, 6%, 24%);
+  --lightGradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --redGradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+} 
+
+
+.estrutura {
+  display: flex;
+  flex-wrap: wrap;
+  background: url(../images/bg-pattern-desktop.svg) no-repeat;
+
+  box-shadow: 1px 2px 10px 0px rgba(45, 45, 45, 0.5);
+  margin-top: 50px;
+}
+
+/*Header*/
+
+.nav {
+  padding-top: 3rem;
+
+}
+
+
+
+/*Conteúdo*/
+
+.content {
+  max-width: 82em;
+  display: flex;
+
+
+  
+}
+
+
+
+.content-intro {
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.intro {
+  max-width: 70%;
+
+}
+
+.intro h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--darkGrayishRed);
+  padding-top: 5rem;
+  
+}
+
+
+.intro span {
+  color: var(--desaturatedRed);
+  font-weight: 300;
+  
+}
+
+.intro p {
+  padding-top: 1.5rem;
+  line-height: 1.7;
+  color: var(--desaturatedRed);
+  font-weight: 400;
+}
+
+/*Components Button*/
+
+.validateField{
+  display: flex;
+  padding-top: 2rem;
+
+}
+
+.validateField input {
+  padding: 1.2rem;
+  border: 1px solid var(--desaturatedRed);
+  border-right: none;
+  width: 350px;
+  height: 20px;
+  border-radius: 25px 0px 0px 25px;
+  opacity: .7;
+}
+
+.validateField input::-webkit-input-placeholder {
+  color: var(--desaturatedRed);
+}
+
+.validateField button {
+  font-size: 2rem;
+  padding: 12px 0;
+  width: 90px;
+  margin-right: 30px;
+  border-style: none; 
+  background: var(--redGradient);
+  color: rgba(255, 255, 255, 0.784); 
+  
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 1px 2px 10px 0px rgba(45, 45, 45, 0.5);
+  cursor: pointer;
+  transition: 100ms ease-out;
+  transform: scaleX(1.2) scaleY(1.2);
+}
+
+.validateField button:hover {
+  transform: scaleX(1.4) scaleY(1.4);
+  background-color: var(--redGradient);
+  color: white;
+}
+
+/*MOBILE*/
+
+
+.mobile{
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .estrutura {
+    margin: 0 auto;
+    
+    align-items: flex-start;
+    background: var(--lightGradient)
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .content-intro .nav {
+    margin-right: 200px;
+    padding: 2rem;
+  }
+
+  .content-intro {
+    
+    padding-left: 0px;
+    align-items: center;
+  }
+
+  .validateField {
+    width: 70%;
+    padding-bottom: 2rem;
+  }
+
+  .validateField button {
+    font-size: 2rem;
+    padding: 12px 0;
+    width: 90px;
+    margin-right: 0;
+    border-style: none; 
+    background: var(--redGradient);
+    color: rgba(255, 255, 255, 0.784); 
+    
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 1px 2px 10px 0px rgba(45, 45, 45, 0.5);
+    cursor: pointer;
+    transition: 100ms ease-out;
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+  .content .model {
+    display: none;
+  }
+}
